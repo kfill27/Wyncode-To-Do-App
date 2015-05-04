@@ -1,21 +1,15 @@
 <p id="notice"><%= notice %></p>
+	<div class="container text-center">	
+		<h2> <%= @todo_list.title %> </h2>
 
-<p>
-  <strong>Title:</strong>
-  <%= @todo_list.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @todo_list.description %>
-</p>
-
-<div id="todo_items_wrapper">
+		<p> <%= @todo_list.description %> </p>
+	</div>
 	<%= render @todo_list.todo_items %>
-	<div id="form">
+	<div id="form" class = "text-center">
 		<%= render "todo_items/form" %>
 	</div>
-</div>
 
-<%= link_to 'Edit', edit_todo_list_path(@todo_list) %> |
-<%= link_to 'Back', todo_lists_path %>
+<div class="container text-center">
+	<%= link_to 'Edit', edit_todo_list_path(@todo_list) %> |
+	<%= link_to 'Back', todo_lists_path %>
+</div>

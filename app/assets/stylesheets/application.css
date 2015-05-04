@@ -14,19 +14,36 @@
  *= require_self
  */
 
- body, td {
- 	font-family: 'Open Sans', sans-serif;
- }
+.container {
+	max-width: 75%;
+}
+.row {
+	display: inline-block;
+	width: 100%;
+	border-bottom: 1px solid black;
+}
 
- h1, h2, h3, h4, h5, h6 {
- 	text-transform: uppercase;
- 	font-family: 'Josefin Slab', sans-serif;
- 	font-weight: 600;
- }
+.complete {
+	width: 10%;
+	float: left;
+	margin: 10px 0;
+	text-align: center;
+}
 
+.todo_item {
+	width: 80%;
+	float: left;
+	border-bottom: 1px solid black;
+}
 
- .btn {
- 	text-transform: uppercase;
-/* 	background: #333;*/
- 	margin: 20px 30px 0 0;
- }
+.remove {
+	width: 10%;
+	float: right;
+	margin: 10px 0;
+	text-align: center;
+}
+
+p {
+	display: inline-block;
+	margin: 10px 0;
+}

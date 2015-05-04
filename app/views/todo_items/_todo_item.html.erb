@@ -1,7 +1,18 @@
-<p><%= todo_item.content %></p>
 
-<div class="trash">
-	<%= link_to todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" } do %>
+<div class="container">
+	<div class="row">
+		<div class="complete">
+		<%= link_to todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "For real?" } do %>
+		<i class="fa fa-check"></i>
+		</div>
+		<% end %>
+
+		<p> <%= todo_item.content %> </p>
+		<div class="remove">
+		<%= link_to todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "For real?" } do %>
 		<i class="fa fa-times"></i>
+		</div>
 	<% end %>
+	</div>
 </div>
+	
